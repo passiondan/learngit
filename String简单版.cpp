@@ -1,6 +1,6 @@
 #define  _CRT_SECURE_NO_WARNINGS
 #include"String.h"
-/*ÀàÖĞ¶ÔÏóĞèÒª¹ÜÀíÒ»¶Î×ÊÔ´£¨ÄÚ´æ£©£¬Ôò±ØĞë½«¿½±´¹¹Ôìº¯ÊıºÍ¸³ÖµÔËËã·ûÖØÔØĞ´³öÀ´*/
+/*ç±»ä¸­å¯¹è±¡éœ€è¦ç®¡ç†ä¸€æ®µèµ„æºï¼ˆå†…å­˜ï¼‰ï¼Œåˆ™å¿…é¡»å°†æ‹·è´æ„é€ å‡½æ•°å’Œèµ‹å€¼è¿ç®—ç¬¦é‡è½½å†™å‡ºæ¥*/
 
 String::String(char* pdata)
 {
@@ -9,8 +9,12 @@ String::String(char* pdata)
 		_pdata = new char[1];
 		*_pdata = '\0';
 	}
-	_pdata = new char[strlen(pdata) + 1];
-	strcpy(_pdata, pdata);
+	else
+	{
+		_pdata = new char[strlen(pdata) + 1];
+	        strcpy(_pdata, pdata);
+		
+	}
 }
 
 
